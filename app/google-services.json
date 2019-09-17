@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "843474257086",
+    "firebase_url": "https://wallpicks-174713.firebaseio.com",
+    "project_id": "wallpicks-174713",
+    "storage_bucket": "wallpicks-174713.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843474257086:android:e679c97ac00038ab",
+        "android_client_info": {
+          "package_name": "com.akshay.wallpicks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-BI-NqwFxZvirg1JUKBehjCY3SyOusUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843474257086:android:bbdcd0ebb42bd59f510aef",
+        "android_client_info": {
+          "package_name": "com.am.minor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843474257086-6ekphtvu97mndvsqap32c78v092v4ud1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.am.minor",
+            "certificate_hash": "4e5c3db319ecd6f598902716165bbc3bcc992407"
+          }
+        },
+        {
+          "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-BI-NqwFxZvirg1JUKBehjCY3SyOusUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
