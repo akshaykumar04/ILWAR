@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <FrameLayout
+    <fragment
+        android:id="@+id/output"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="9">
+        android:layout_weight="7">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <Button
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="HOME"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:layout_marginHorizontal="15dp" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Hey"
-                android:layout_weight="1" />
+        <Button
+            android:layout_marginHorizontal="15dp"
+            android:id="@+id/profile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Profile"
+            android:layout_weight="1"
+            android:onClick="onClick" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Hey"
-                android:layout_weight="1" />
+        <Button
+            android:layout_marginHorizontal="15dp"
+            android:id="@+id/tutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Tutorial"
+            android:layout_weight="1"
+            android:onClick="onClick" />
+    </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Hey"
-                android:layout_weight="1" />
-        </LinearLayout>
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </LinearLayout>
