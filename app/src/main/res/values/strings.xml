@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Minor</string>
+    <string name="title_activity_bottom_nav">BottomNav</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_tutorial">Tutorial</string>
 </resources>
