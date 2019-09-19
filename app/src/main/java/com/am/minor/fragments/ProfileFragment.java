@@ -19,12 +19,15 @@ import com.google.firebase.auth.FirebaseUser;
 public class ProfileFragment extends Fragment {
 
     private ImageView profilePic;
+    TextView name, email;
     private FirebaseAuth mAuth;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, viewGroup, false);
         mAuth = FirebaseAuth.getInstance();
         profilePic = view.findViewById(R.id.profilePic);
+        name = view.findViewById(R.id.displayName);
+        email = view.findViewById(R.id.displayEmail);
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateProfile(currentUser);
 
@@ -36,6 +39,8 @@ public class ProfileFragment extends Fragment {
     private void updateProfile(FirebaseUser user) {
 
         if (user != null) {
+            name.setText(user.getDisplayName());
+            email.setText(user.getEmail());
             // Loading profile image
             Uri profilePicUrl = user.getPhotoUrl();
             if (profilePicUrl != null) {
