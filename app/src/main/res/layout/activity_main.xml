@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="#ECEAEA"
-    android:padding="12dp"
-    tools:context=".MainActivity">
+    android:padding="12dp">
 
 
     <LinearLayout
@@ -38,7 +36,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/transfer"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -53,7 +51,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Networks"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -90,7 +88,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/algorithm"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -105,7 +103,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Algorithms"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -142,7 +140,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/flask"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -157,7 +155,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Chemistry"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -204,7 +202,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/database"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -219,7 +217,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="DBMS"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -256,7 +254,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/solar"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -271,7 +269,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Electrical"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -308,7 +306,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/mach"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -323,7 +321,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Mechanical"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -370,7 +368,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/www"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -385,7 +383,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Web Dev"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -422,7 +420,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/web"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -437,7 +435,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Programming"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -474,7 +472,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/calculator"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -489,7 +487,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Maths"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -536,7 +534,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/magnet"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -551,7 +549,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="Physics"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -588,7 +586,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/ai"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -603,7 +601,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="AI"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
@@ -640,7 +638,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/windows"
                         android:layout_weight="8">
 
                     </ImageView>
@@ -655,7 +653,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:text="@string/app_name"
+                        android:text="OS"
                         android:textSize="16sp"
                         android:layout_marginTop="4dp"
                         android:textAlignment="center"
