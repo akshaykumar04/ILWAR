@@ -1,7 +1,10 @@
 package com.am.minor;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,5 +57,17 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         }
 
         return loadFragment(fragment);
+    }
+
+
+    public void openARCamera(View view) {
+
+        Intent intent = getPackageManager().getLaunchIntentForPackage("com.am.ar");
+        if (intent == null) {
+            Toast.makeText(view.getContext(), "Error Launching Camera!", Toast.LENGTH_SHORT).show();
+        }
+        assert intent != null;
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getApplication().startActivity(intent);
     }
 }
