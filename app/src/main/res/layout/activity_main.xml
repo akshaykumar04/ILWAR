@@ -28,6 +28,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -80,6 +81,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -195,6 +197,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -247,6 +250,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -299,6 +303,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -361,6 +366,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -413,6 +419,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -465,6 +472,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -527,6 +535,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -567,6 +576,7 @@
         </LinearLayout>
 
         <LinearLayout
+
             android:layout_width="0dp"
             android:padding="4dp"
             android:layout_height="match_parent"
@@ -579,6 +589,7 @@
 
 
                 <LinearLayout
+                    android:onClick="openARCamera"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="8dp"
@@ -619,6 +630,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:onClick="openARCamera"
             android:layout_width="0dp"
             android:padding="4dp"
             android:layout_height="match_parent"

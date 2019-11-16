@@ -13,7 +13,6 @@ public class TutorialFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_tutorial, viewGroup, false);
 
-
         return view;
     }
 }

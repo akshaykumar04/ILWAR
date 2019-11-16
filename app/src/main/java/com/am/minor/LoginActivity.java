@@ -69,6 +69,8 @@ public class LoginActivity extends AppCompatActivity {
                 signOut();
             }
         });
+
+        checkUserStatus();
     }
 
     /**
@@ -183,6 +185,16 @@ public class LoginActivity extends AppCompatActivity {
                         updateUI(null);
                     }
                 });
+    }
+
+    private void checkUserStatus(){
+        FirebaseUser User = mAuth.getCurrentUser();
+        if (User != null){
+            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+
     }
 
 }

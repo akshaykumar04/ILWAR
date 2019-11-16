@@ -70,4 +70,5 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getApplication().startActivity(intent);
     }
+
 }
