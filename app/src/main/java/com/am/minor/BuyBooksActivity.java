@@ -123,6 +123,4 @@ public class BuyBooksActivity extends AppCompatActivity {
 
     }
 
-
-
 }

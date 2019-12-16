@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.am.minor.fragments.HomeFragment;
 import com.am.minor.fragments.ProfileFragment;
-import com.am.minor.fragments.TutorialFragment;
+import com.am.minor.fragments.ScannerFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 break;
 
             case R.id.navigation_tutorial:
-                fragment = new TutorialFragment();
+                fragment = new ScannerFragment();
                 break;
         }
 

@@ -21,7 +21,7 @@ import com.am.minor.R;
 public class IndiaBookStore extends Fragment {
 
     private WebView bookStore;
-    private String base_url = "https://www.indiabookstore.net/search?q=9788131721018";
+    private String base_url = "https://www.indiabookstore.net/search?q=";
 
 
     @Override
@@ -29,10 +29,8 @@ public class IndiaBookStore extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.book_store, container, false);
 
-//        Bundle bundle = getIntent().getExtras();
-//        text = bundle.getString("textDetected");
-//        text.replace(" ", "+");
-//        language = bundle.getString("key");
+        Bundle bundle = getActivity().getIntent().getExtras();
+        String isbn = bundle.getString("isbn");
 
         String newUA = "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.0.4) Gecko/20100101 Firefox/4.0";
         bookStore = rootView.findViewById(R.id.webview);
@@ -42,7 +40,7 @@ public class IndiaBookStore extends Fragment {
         bookStore.clearHistory();
         bookStore.clearCache(true);
         //bookStore.getSettings().setUserAgentString(newUA);
-        bookStore.loadUrl(base_url);
+        bookStore.loadUrl(base_url + isbn);
 
 
         bookStore.canGoBack();

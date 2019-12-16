@@ -18,5 +18,5 @@
     <fragment
         android:id="@+id/navigation_tutorial"
         android:label="@string/title_tutorial"
-        tools:layout="@layout/fragment_tutorial" />
+        tools:layout="@layout/fragment_scanner" />
 </navigation>
