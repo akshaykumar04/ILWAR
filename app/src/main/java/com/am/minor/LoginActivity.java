@@ -1,6 +1,5 @@
 package com.am.minor;
 
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -31,7 +30,6 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
-
 
     private static final String TAG = "MainActivity";
     private static final int RC_SIGN_IN = 9001;
@@ -69,6 +67,17 @@ public class LoginActivity extends AppCompatActivity {
                 signOut();
             }
         });
+
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            String data = bundle.getString("key");
+            if (data == null) {
+                signOut();
+            }
+        }
+
+        checkUserStatus();
     }
 
     /**
@@ -174,7 +183,6 @@ public class LoginActivity extends AppCompatActivity {
     private void signOut() {
         // Firebase sign out
         mAuth.signOut();
-
         // Google sign out
         mGoogleSignInClient.signOut().addOnCompleteListener(this,
                 new OnCompleteListener<Void>() {
@@ -183,6 +191,16 @@ public class LoginActivity extends AppCompatActivity {
                         updateUI(null);
                     }
                 });
+    }
+
+    private void checkUserStatus() {
+        FirebaseUser User = mAuth.getCurrentUser();
+        if (User != null) {
+            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(i);
+            finish();
+        }
+
     }
 
 }

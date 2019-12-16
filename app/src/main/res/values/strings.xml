@@ -4,4 +4,7 @@
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
     <string name="title_tutorial">Tutorial</string>
+    <string name="title_activity_buy_books">BuyBooks</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>
