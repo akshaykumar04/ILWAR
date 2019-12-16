@@ -7,8 +7,10 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.fragment.app.Fragment;
 
@@ -18,10 +20,10 @@ import com.am.minor.R;
  * Created by Akshay on 12-07-2018.
  */
 
-public class Flipkart extends Fragment {
+public class Rediff extends Fragment {
 
     private WebView bookStore;
-    private String base_url = "https://www.flipkart.com/search?q=9788131721018";
+    private String base_url = "https://books.rediff.com/exactmatch/9788131731864";
 
 
     @Override
@@ -45,6 +47,7 @@ public class Flipkart extends Fragment {
         bookStore.loadUrl(base_url);
 
 
+
         bookStore.canGoBack();
         bookStore.setOnKeyListener(new View.OnKeyListener() {
 
@@ -62,7 +65,5 @@ public class Flipkart extends Fragment {
 
         return rootView;
     }
-
-
 
 }

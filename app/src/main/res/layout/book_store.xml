@@ -6,13 +6,11 @@
     android:orientation="vertical">
 
 
-    <TextView
+    <WebView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="bookswagon"
-        android:textSize="60sp">
+        android:id="@+id/webview"
+        android:layout_height="match_parent">
 
-    </TextView>
-
+    </WebView>
 
 </LinearLayout>

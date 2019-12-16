@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.am.minor.fragments.stores.Amazon;
-import com.am.minor.fragments.stores.BooksWagon;
+import com.am.minor.fragments.stores.Rediff;
 import com.am.minor.fragments.stores.Flipkart;
 import com.am.minor.fragments.stores.IndiaBookStore;
 import com.am.minor.fragments.stores.Paytm;
@@ -89,7 +89,7 @@ public class BuyBooksActivity extends AppCompatActivity {
                     return tab4;
 
                 case 4:
-                    BooksWagon tab5 = new  BooksWagon();
+                    Rediff tab5 = new Rediff();
                     return tab5;
 
 
