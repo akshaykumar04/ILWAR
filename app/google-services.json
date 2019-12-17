@@ -71,6 +71,80 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843474257086:android:8b0233cd2b02c64d510aef",
+        "android_client_info": {
+          "package_name": "com.pixelbot.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843474257086-g3cetu7jugo93qqjjh2kd4doemf4140u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixelbot.chatapp",
+            "certificate_hash": "4e5c3db319ecd6f598902716165bbc3bcc992407"
+          }
+        },
+        {
+          "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-BI-NqwFxZvirg1JUKBehjCY3SyOusUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843474257086:android:5ea06fb695ca3bad510aef",
+        "android_client_info": {
+          "package_name": "com.pixelbot.configuration_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843474257086-8kaqprsbtocv4emkutp5mbr80uh7sjll.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pixelbot.configuration_project",
+            "certificate_hash": "4e5c3db319ecd6f598902716165bbc3bcc992407"
+          }
+        },
+        {
+          "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-BI-NqwFxZvirg1JUKBehjCY3SyOusUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "843474257086-e42256ks2cr18n3e3uuoaogstm8vvgkl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

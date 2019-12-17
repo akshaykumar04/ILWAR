@@ -129,7 +129,7 @@ public class BarcodeScannerActivity extends AppCompatActivity implements ZXingSc
         final String myResult = result.getText();
         Log.d("QRCodeScanner", result.getText());
         Log.d("QRCodeScanner", result.getBarcodeFormat().toString());
-        
+
         Intent buyBooks = new Intent(this, BuyBooksActivity.class);
         buyBooks.putExtra("isbn", myResult);
         startActivity(buyBooks);

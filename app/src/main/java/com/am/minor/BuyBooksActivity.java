@@ -1,7 +1,9 @@
 package com.am.minor;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -15,9 +17,11 @@ import com.am.minor.fragments.stores.Rediff;
 import com.am.minor.fragments.stores.Flipkart;
 import com.am.minor.fragments.stores.IndiaBookStore;
 import com.am.minor.fragments.stores.Paytm;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
 public class BuyBooksActivity extends AppCompatActivity {
+
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
@@ -33,7 +37,6 @@ public class BuyBooksActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
 
         // Create the adapter that will return a fragment for each of the three
