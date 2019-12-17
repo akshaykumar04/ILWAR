@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtpActivity">
+    tools:context=".otp.VerifyPhoneActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -52,101 +52,35 @@
         android:textAlignment="center"
         android:textColor="@color/colorPrimary" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1">
+        android:layout_below="@id/textView1"
+        android:layout_centerHorizontal="true"
+        android:digits="0123456789"
+        android:hint="enter code"
+        android:maxLength="6" />
 
 
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorPrimary"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:padding="15dp"
-            app:cardBackgroundColor="#FBF7F7"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="25dp"
-                    android:paddingRight="25dp">
-
-                    <EditText
-                        android:id="@+id/number"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:layout_weight="1"
-                        android:drawableLeft="@drawable/ic_phone_black_24dp"
-                        android:drawablePadding="15dp"
-                        android:hint="Enter your mobile number"
-                        android:inputType="phone" />
-
-                    <ImageView
-                        android:id="@+id/verifiedsign"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="15dp"
-                        android:src="@drawable/ic_check_circle_black_24dp"
-                        android:visibility="invisible" />
-
-                </LinearLayout>
-
-                <EditText
-                    android:id="@+id/code"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="25dp"
-                    android:background="@drawable/rect_text_edit"
-                    android:hint="Enter Code"
-                    android:inputType="number"
-                    android:padding="10dp"
-                    android:visibility="invisible" />
-
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/sendotp_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="20dp"
-                    android:src="@drawable/ic_send_white_24dp" />
-
-                <TextView
-                    android:id="@+id/timertv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="25sp"
-                    android:clickable="true"
-                    android:textSize="20sp" />
-
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-
-<ProgressBar
-    android:id="@+id/pbar"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-</ProgressBar>
-
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSignIn"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
 
 </RelativeLayout>

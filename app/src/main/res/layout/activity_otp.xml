@@ -1,145 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/parentlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OtpActivity">
+    tools:context=".otp.OtpActivity">
 
-    <FrameLayout
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary">
 
-        <LinearLayout
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/app_logo" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="-50dp"
+        android:background="@drawable/waves" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/appname"
+        android:layout_below="@id/imageView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:text="Interactive Learning with AR"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appname"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="May I ask you phone number?"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <Spinner
+            android:id="@+id/spinnerCountries"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:digits="0123456789"
+            android:inputType="phone"
+            android:hint="enter your number"
+            android:maxLength="10" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".3"
-                android:background="@color/colorPrimary"></View>
+    </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"></View>
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="#ffffff" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="25dp"
-                android:fontFamily="sans-serif"
-                android:textColor="#ffffff"
-                android:text="Enter your mobile number to continue."
-                android:textSize="20sp" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="70dp"
-                android:layout_height="0dp"
-                android:layout_gravity="center"
-                android:layout_weight=".6"
-                android:src="@drawable/smartphone" />
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:padding="15dp"
-                    app:cardBackgroundColor="#FBF7F7"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="5dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="30dp"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:paddingLeft="25dp"
-                            android:paddingRight="25dp">
-
-                            <EditText
-                                android:id="@+id/numbered"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="15dp"
-                                android:layout_weight="1"
-                                android:drawableLeft="@drawable/ic_phone_black_24dp"
-                                android:drawablePadding="15dp"
-                                android:hint="Enter your mobile number"
-                                android:inputType="phone" />
-
-                            <ImageView
-                                android:id="@+id/verifiedsign"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="15dp"
-                                android:src="@drawable/ic_check_circle_black_24dp"
-                                android:visibility="invisible" />
-
-                        </LinearLayout>
-
-                        <EditText
-                            android:id="@+id/verificationed"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="25dp"
-                            android:background="@drawable/rect_text_edit"
-                            android:hint="Enter Code"
-                            android:inputType="number"
-                            android:padding="10dp"
-                            android:visibility="invisible" />
-
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                            android:id="@+id/sendverifybt"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="20dp"
-                            android:src="@drawable/ic_send_white_24dp" />
-
-                        <TextView
-                            android:id="@+id/timertv"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="25sp"
-                            android:clickable="true"
-                            android:textSize="20sp" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </ScrollView>
-
-        </LinearLayout>
-
-
-    </FrameLayout>
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

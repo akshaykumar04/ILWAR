@@ -10,15 +10,17 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OtpActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
         <activity android:name=".BarcodeScannerActivity" />
         <activity
             android:name=".BuyBooksActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".SplashActivity" />
-        <activity android:name=".AboutActivity"/>
+        <activity android:name=".AboutActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".otp.VerifyPhoneActivity">
+        </activity>
+        <activity android:name=".otp.OtpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,11 +28,11 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
     <uses-feature android:name="android.hardware.camera" />
-    <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
 </manifest>

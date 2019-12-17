@@ -1,20 +1,21 @@
-package com.am.minor;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.am.minor.otp;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.am.minor.LoginActivity;
+import com.am.minor.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,16 +24,14 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class OtpActivity extends AppCompatActivity {
+public class VerifyPhoneActivity extends AppCompatActivity {
 
 
     private String verificationId;
     private FirebaseAuth mAuth;
     private ProgressBar progressBar;
-    public String phone, code;
+    private EditText editText;
     private String logoutKey = null;
-    EditText editTextCode;
-    FloatingActionButton sendotp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,37 +40,22 @@ public class OtpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        progressBar = findViewById(R.id.pbar);
-        EditText mobile =  findViewById(R.id.numbered);
-        final EditText editTextCode = findViewById(R.id.code);
+        progressBar = findViewById(R.id.progressbar);
+        editText = findViewById(R.id.editTextCode);
 
+        String phonenumber = getIntent().getStringExtra("phonenumber");
+        sendVerificationCode(phonenumber);
 
-        phone = mobile.getText().toString();
-        code = "+91";
-
-
-        sendotp = findViewById(R.id.sendotp_btn);
-        sendotp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(OtpActivity.this, code+phone, Toast.LENGTH_SHORT).show();
-                sendVerificationCode(code+ phone);
-            }
-        });
-
-
-
-
-        findViewById(R.id.sendotp_btn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonSignIn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String code = editTextCode.getText().toString().trim();
+                String code = editText.getText().toString().trim();
 
                 if (code.isEmpty() || code.length() < 6) {
 
-                    editTextCode.setError("Enter code...");
-                   editTextCode.requestFocus();
+                    editText.setError("Enter code...");
+                    editText.requestFocus();
                     return;
                 }
                 verifyCode(code);
@@ -92,14 +76,14 @@ public class OtpActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Intent intent = new Intent(OtpActivity.this, LoginActivity.class);
+                            Intent intent = new Intent(VerifyPhoneActivity.this, LoginActivity.class);
                             intent.putExtra("key", logoutKey);
-                            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 
                             startActivity(intent);
 
                         } else {
-                            Toast.makeText(OtpActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            Toast.makeText(VerifyPhoneActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -130,14 +114,14 @@ public class OtpActivity extends AppCompatActivity {
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();
             if (code != null) {
-                editTextCode.setText(code);
+                editText.setText(code);
                 verifyCode(code);
             }
         }
 
         @Override
         public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(OtpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(VerifyPhoneActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     };
 }
