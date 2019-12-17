@@ -5,6 +5,7 @@
     <string name="title_profile">Profile</string>
     <string name="title_tutorial">Tutorial</string>
     <string name="title_activity_buy_books">BuyBooks</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tag_send">send</string>
+    <string name="tag_verify">verify</string>
+    <string name="main_menu_about">About</string>
 </resources>

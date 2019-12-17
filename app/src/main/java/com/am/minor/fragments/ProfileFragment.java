@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.am.minor.LoginActivity;
 import com.am.minor.R;
+import com.am.minor.otp.OtpActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;

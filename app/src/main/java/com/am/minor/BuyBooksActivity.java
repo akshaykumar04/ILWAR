@@ -11,13 +11,14 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.am.minor.fragments.stores.Amazon;
-import com.am.minor.fragments.stores.Rediff;
 import com.am.minor.fragments.stores.Flipkart;
 import com.am.minor.fragments.stores.IndiaBookStore;
 import com.am.minor.fragments.stores.Paytm;
+import com.am.minor.fragments.stores.Rediff;
 import com.google.android.material.tabs.TabLayout;
 
 public class BuyBooksActivity extends AppCompatActivity {
+
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
@@ -35,7 +36,6 @@ public class BuyBooksActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -51,7 +51,6 @@ public class BuyBooksActivity extends AppCompatActivity {
 
 
     }
-
 
 
     /**
