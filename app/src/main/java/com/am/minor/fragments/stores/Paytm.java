@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -42,8 +43,6 @@ public class Paytm extends Fragment {
         bookStore.getSettings().setJavaScriptEnabled(true);
         bookStore.setWebChromeClient(new WebChromeClient());
         bookStore.getSettings().setPluginState(WebSettings.PluginState.ON);
-        bookStore.clearHistory();
-        bookStore.clearCache(true);
         //bookStore.getSettings().setUserAgentString(newUA);
         bookStore.loadUrl(base_url + isbn);
 
@@ -79,5 +78,10 @@ public class Paytm extends Fragment {
 
 
         return rootView;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
     }
 }

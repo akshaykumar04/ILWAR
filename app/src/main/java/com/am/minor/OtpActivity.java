@@ -41,7 +41,6 @@ public class OtpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-
         progressBar = findViewById(R.id.pbar);
         EditText mobile =  findViewById(R.id.numbered);
         final EditText editTextCode = findViewById(R.id.code);
